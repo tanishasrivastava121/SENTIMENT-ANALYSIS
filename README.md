@@ -92,3 +92,15 @@ Sentiment analysis helped identify hidden user emotions and trends not captured 
 
 Conclusion
 The sentiment analysis project highlights how textual data can be leveraged to gauge audience perceptions. Conducted entirely on Kaggle, the project demonstrates the application of both basic and advanced NLP techniques in a practical, real-world context. Such insights are invaluable for improving user engagement, curating personalized content, and refining marketing strategies.
+
+Output
+
+![Image](https://github.com/user-attachments/assets/d6dee552-0ab7-4cde-9c0f-131701e0d0f4)
+
+![Image](https://github.com/user-attachments/assets/9c26e449-b9e3-4619-969d-dfb9a56fda8e)
+
+![Image](https://github.com/user-attachments/assets/0d71d2d5-62d3-4217-9a6c-e6968ad0e647)
+
+![Image](https://github.com/user-attachments/assets/e1a69de1-03d1-4cd3-b659-705c468df356)
+
+![Image](https://github.com/user-attachments/assets/1e065f3c-9a72-4faa-84a5-ceba58ab2e0f)

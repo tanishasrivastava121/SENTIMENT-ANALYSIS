@@ -1,0 +1,36 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+df = pd.read_excel("/kaggle/input/new-nextflix-dataset/netflix_with_sentiment.xlsx")
+import matplotlib.pyplot as plt
+import seaborn as sns
+# Count sentiment labels
+sentiment_counts = df['sentiment_label'].value_counts()
+# Create a bar chart
+plt.figure(figsize=(8, 5))
+sns.barplot(x=sentiment_counts.index, y=sentiment_counts.values, palette='coolwarm')
+# Add chart title and labels
+plt.title("Sentiment Distribution of Reviews")
+plt.xlabel("Sentiment")
+plt.ylabel("Number of Reviews")
+plt.tight_layout()
+plt.show()
+# Pie Chart
+plt.figure(figsize=(6,6))
+plt.pie(sentiment_counts, labels=sentiment_counts.index, autopct='%1.1f%%', startangle=140)
+plt.title("Sentiment Breakdown")
+plt.axis('equal')  # Equal aspect ratio makes it a perfect circle.
+plt.show()
+# Box Plot – Sentiment Score Distribution
+sns.boxplot(x='sentiment_label', y='sentiment', data=df, palette='Pastel1')
+plt.title('Sentiment Score Distribution by Label')
+# Histogram – Polarity Scores
+sns.histplot(df['sentiment'], bins=30, kde=True, color='skyblue')
+plt.title('Distribution of Sentiment Polarity Scores')
+# Line Plot: Sentiment Over Time
+yearly_sentiment = df.groupby(['release_year', 'sentiment_label']).size().unstack().fillna(0)
+yearly_sentiment.plot(kind='line', figsize=(10, 5), marker='o')
+plt.title('Sentiment Trends Over the Years')
+plt.xlabel('Release Year')
+plt.ylabel('Number of Titles')
+plt.grid(True)
+plt.show()
